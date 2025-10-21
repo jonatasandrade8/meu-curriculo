@@ -4,138 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Jonatas Andrade da Silva</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            animation: slideUp 0.8s ease-out;
-        }
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-        }
-        .photo-placeholder {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid white;
-            margin: 0 auto 20px;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #666;
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-        .photo-placeholder:hover { transform: scale(1.05); }
-        .name { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; position: relative; z-index: 1; }
-        .title { font-size: 1.2em; opacity: 0.9; position: relative; z-index: 1; }
-        .content { padding: 40px; }
-        .section { margin-bottom: 35px; opacity: 0; animation: fadeInUp 0.6s ease-out forwards; }
-        .section:nth-child(1) { animation-delay: 0.2s; }
-        .section:nth-child(2) { animation-delay: 0.4s; }
-        .section:nth-child(3) { animation-delay: 0.6s; }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .section-title {
-            font-size: 1.5em;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #3498db;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: #e74c3c;
-            transition: width 0.3s ease;
-        }
-        .section:hover .section-title::after { width: 100%; }
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .contact-item:hover { background: #e9ecef; transform: translateX(5px); }
-        .interests { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
-        .interest-tag {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: all 0.3s ease;
-        }
-        .interest-tag:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3); }
-        .competency {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            border-radius: 0 8px 8px 0;
-            transition: all 0.3s ease;
-        }
-        .competency:hover { background: #e9ecef; border-left-color: #e74c3c; transform: translateX(5px); }
-        .competency strong { color: #2c3e50; }
-        .language-switch {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .language-switch button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background: #3498db;
-            color: white;
-            transition: background 0.3s;
-        }
-        .language-switch button:hover {
-            background: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="language-switch">
@@ -170,15 +39,50 @@
                 </div>
                 <div class="section">
                     <h2 class="section-title">Competências</h2>
-                    <div class="competency"><strong>Formação Acadêmica:</strong> Atualmente cursando bacharelado em Ciências e Tecnologia na UFRN com ênfase em engenhara da computação</div>
-                    <div class="competency"><strong>Experiência Atual:</strong> Coordenador de Promotores de vendas com experiência em gestão de pessoas, dados, vendas e logística</div>
-                    <div class="competency"><strong>Experiência Anterior (2018/2019):</strong> Gestão de estoque em Excel com análise de dados e previsão de demanda. Atuação no  compras da casa de festas e grupo de cantinas escolares</div>
+                    <div class="competency"><strong>Formação Acadêmica:</strong> Atualmente cursando bacharelado em Ciências e Tecnologia na UFRN com ênfase em engenhara da computação.</div>
+                    <div class="competency"><strong>Experiência Atual:</strong> Coordenador de Promotores de vendas com experiência em gestão de pessoas, dados, vendas e logística.</div>
+                    <div class="competency"><strong>Experiência Anterior (2018/2019):</strong> Gestão de estoque em Excel com análise de dados e previsão de demanda. Atuação no  compras da casa de festas e grupo de cantinas escolares.</div>
                     <div class="competency"><strong>Desenvolvimento Pessoal:</strong> Entusiasta da área de dados, cada vez mais aprendendo e transformando dados em insights para tomada de decisão.</div>
                     <div class="competency"><strong>Habilidades Técnicas:</strong> Excel (avançado), Javascript/CSS/HTML (intermediário), Python(Intermediário)</div>
                 </div>
-            </div>
-        
+                <div class="section">
+                    <h2 class="section-title">Sobre mim</h2>
+                    <div class="competency"><strong>Pessoal:</strong> 
+                        <p>Me chamo Jonatas Andrade, sou casado, pai de Sophia, Lizzie e Davi. 
+                       Gosto de entender como as coisas funcionam e compreender as relações 
+                       causa-efeito. Gosto de focar em soluções mais pragmáticas para resolução dos 
+                       problemas de modo geral, ao invés de gastar tempo e energia encontrando culpados.
+                     </p>
+                    </div>
+                    
+                     <div class="competency"><strong>Promotor de vendas:</strong> 
+                        <p>Como promotor de vendas atuei por 8 anos em diversas redes de lojas, 
+                        com os mais diversos públicos, de varejistas premium a grandes atacados, 
+                        sempre buscando ouvir e atender as expectativas do cliente e sempre buscando 
+                        melhorar a forma como executava minhas tarefas. 
+                     </p>
+                    </div>
+                     <div class="competency"><strong>Telemarketing:</strong>
+                        <p>Como atendente de telemarketing, pude refinar minha escuta ativa e aprender a me conectar com
+                        pessoas para colaboração e troca de aprendizado, ou seja, crescimento simultâneo. Lá tive o contato com líderes proativos e 
+                        enérgicos, que de fato estavam empenhados na solução de problemas. Obtive experiência com venda 
+                        de passagens aéreas, alterações, cancelamentos etc.
+                     </p>
+                    </div>
+                     <div class="competency"><strong>Coodenador:</strong>
+                        <p>Como Coordenador estou tendo o privilégio de aprender sobre gestão de pessoas, resultados e processos. Isso te me ajudado a
+                        entender um pouco sobre a realidade dos postos de trabalho e as demandas do setor. Tentar compreender e 
+                        buscar incentivar colaboradores a se superarem é sem dúvida uma das tarefas mais desafiadoras e recompensadoras para um gestor.   
+                    </p>
+                    </div>
+                     <div class="competency"><strong>Estudante:</strong>
+                        <p>Como estudante de Ciencias e Tecnologia e da computação, pude aprender conceitos fundamentais
+                        de abstração, raciocínio lógico e foco na resolução do problema. Mais legal é a aplicabilidade dese conceito
+                        pra vida. 
+                        </p>  
+                    </div>
     </div>
+    
     <div id="en" style="display: none;">
         <div class="container">
             <div class="header">
@@ -208,21 +112,16 @@
                 </div>
                 <div class="section">
                     <h2 class="section-title">Skills</h2>
-                    <div class="competency"><strong>Academic Background:</strong> Currently pursuing a Bachelor's in Science and Technology at UFRN</div>
-                    <div class="competency"><strong>Current Position:</strong> Sales Promoter Coordinator with experience in team management, data, sales, and logistics</div>
-                    <div class="competency"><strong>Previous Experience (2018/2019):</strong> Inventory management in Excel with data analysis and demand and purchase forecasting for the party house and school cafeteria group</div>
-                    <div class="competency"><strong>Personal Development:</strong>I'm a data science enthusiast, always learning about the Python universe and transforming data into powerful insights for decision-making</div>
-                    <div class="competency"><strong>Technical Skills:</strong> Excel (advanced), Javascript/CSS/HTML (intermediate), Python(intermediate)</div>
+                    <div class="competency"><strong>Academic Background:</strong> Currently pursuing a Bachelor's in Science and Technology at UFRN.</div>
+                    <div class="competency"><strong>Current Position:</strong> Sales Promoter Coordinator with experience in team management, data, sales, and logistics.</div>
+                    <div class="competency"><strong>Previous Experience (2018/2019):</strong> Inventory management in Excel with data analysis and demand and purchase forecasting for the party house and school cafeteria group.</div>
+                    <div class="competency"><strong>Personal Development:</strong>I'm a data science enthusiast, always learning about the Python universe and transforming data into powerful insights for decision-making.</div>
+                    <div class="competency"><strong>Technical Skills:</strong> Excel (advanced), Javascript/CSS/HTML (intermediate), Python(intermediate).</div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        function switchLanguage(lang) {
-            document.getElementById('pt').style.display = (lang === 'pt') ? 'block' : 'none';
-            document.getElementById('en').style.display = (lang === 'en') ? 'block' : 'none';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
