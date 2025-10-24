@@ -3,16 +3,18 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* Fundo profissional: Cinza claro sutil */
+            background-color: #f4f7f6;
             min-height: 100vh;
-            padding: 20px;
+            padding: 30px 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            /* Sombra mais suave */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             overflow: hidden;
             animation: slideUp 0.8s ease-out;
         }
@@ -21,7 +23,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            /* Cor de destaque profissional: Azul Marinho Sóbrio */
+            background-color: #2c3e50;
             color: white;
             padding: 40px;
             text-align: center;
@@ -31,21 +34,19 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 4px solid #f4f7f6; /* Borda mais clara */
             margin: 0 auto 20px;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            background: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            color: #666;
             position: relative;
             z-index: 1;
             transition: transform 0.3s ease;
         }
         .photo-placeholder:hover { transform: scale(1.05); }
-        .name { font-size: 2.5em; font-weight: 300; margin-bottom: 10px; position: relative; z-index: 1; }
-        .title { font-size: 1.2em; opacity: 0.9; position: relative; z-index: 1; }
+        .name { font-size: 2.5em; font-weight: 600; margin-bottom: 5px; position: relative; z-index: 1; }
+        .title { font-size: 1.1em; opacity: 0.8; position: relative; z-index: 1; }
         .content { padding: 40px; }
         .section { margin-bottom: 35px; opacity: 0; animation: fadeInUp 0.6s ease-out forwards; }
         .section:nth-child(1) { animation-delay: 0.2s; }
@@ -56,28 +57,17 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .section-title {
-            font-size: 1.5em;
+            font-size: 1.4em;
             color: #2c3e50;
             margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #3498db;
-            position: relative;
-            display: inline-block;
+            padding-bottom: 5px;
+            /* Linha de separação mais sutil */
+            border-bottom: 2px solid #3498db; 
+            font-weight: 600;
         }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: #e74c3c;
-            transition: width 0.3s ease;
-        }
-        .section:hover .section-title::after { width: 100%; }
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -86,45 +76,153 @@
             align-items: center;
             padding: 10px;
             background: #f8f9fa;
-            border-radius: 8px;
+            border-radius: 5px;
             transition: all 0.3s ease;
+            font-size: 0.95em;
         }
-        .contact-item:hover { background: #e9ecef; transform: translateX(5px); }
-        .interests { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .contact-item:hover { background: #e9ecef; transform: translateX(3px); }
+        .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
         .interest-tag {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background-color: #34495e; /* Azul Marinho Escuro */
             color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 6px 12px;
+            border-radius: 4px;
             font-size: 0.9em;
             transition: all 0.3s ease;
         }
-        .interest-tag:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3); }
+        .interest-tag:hover { background-color: #1f2a36; transform: translateY(-1px); }
         .competency {
             margin-bottom: 15px;
             padding: 15px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            border-radius: 0 8px 8px 0;
+            background: #ffffff; 
+            /* Borda lateral sutil */
+            border-left: 3px solid #3498db; 
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
         }
-        .competency:hover { background: #e9ecef; border-left-color: #e74c3c; transform: translateX(5px); }
-        .competency strong { color: #2c3e50; }
+        .competency:hover { border-left-color: #e74c3c; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .competency strong { color: #2c3e50; font-weight: 600; }
+
+        /* Estilo dos Botões de Idioma e Download */
         .language-switch {
             text-align: center;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
         }
         .language-switch button {
-            padding: 10px 20px;
-            margin: 5px;
+            padding: 10px 18px;
             font-weight: bold;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            background: #3498db;
+            background: #3498db; /* Azul Principal */
             color: white;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .language-switch button:hover {
             background: #2980b9;
+            transform: translateY(-1px);
+        }
+        .language-switch .separator {
+            color: #ccc;
+            font-size: 1.2em;
+        }
+
+        /* ************************************** */
+        /* Estilo para Impressão (PDF) */
+        /* ************************************** */
+        @media print {
+            /* 1. Reset Global de Margem e Fundo */
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: none !important;
+                color: #000;
+                font-size: 12pt; /* Fonte ligeiramente menor para economizar espaço */
+            }
+            .container {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                max-width: none !important;
+                width: 100%;
+                margin: 0;
+            }
+            
+            /* 2. Ocultar Elementos de Interface */
+            .language-switch,
+            .photo-placeholder:hover,
+            .contact-item:hover,
+            .competency:hover {
+                display: none !important;
+            }
+            
+            /* 3. Otimizar Espaçamento */
+            .header {
+                padding: 20px 30px; /* Reduz padding do cabeçalho */
+            }
+            .name {
+                font-size: 1.8em; /* Reduz tamanho do nome */
+            }
+            .title {
+                font-size: 1em;
+            }
+            .photo-placeholder {
+                width: 90px;
+                height: 90px;
+                margin: 0 auto 10px; /* Reduz foto e margem */
+            }
+            .content {
+                padding: 15px 30px; /* Reduz padding do conteúdo principal */
+            }
+            .section {
+                margin-bottom: 15px; /* Reduz espaçamento entre seções */
+                opacity: 1 !important;
+                animation: none !important;
+                transform: none !important;
+                break-inside: avoid; /* Mantém a seção inteira na mesma página */
+            }
+            .section-title {
+                font-size: 1.2em; /* Reduz tamanho do título da seção */
+                margin-bottom: 10px;
+            }
+            .competency {
+                margin-bottom: 10px; /* Reduz espaçamento entre competências */
+                padding: 10px; /* Reduz padding da caixa de competência */
+                font-size: 0.95em; /* Reduz tamanho do texto principal */
+                border-left: 3px solid #3498db !important;
+                box-shadow: none !important;
+            }
+            .competency p {
+                margin-top: 5px; /* Reduz margem dentro do parágrafo */
+            }
+            .contact-info {
+                gap: 10px; /* Reduz espaçamento na grade de contatos */
+            }
+            .contact-item {
+                 padding: 5px 8px;
+            }
+            .interests {
+                gap: 6px;
+                margin-top: 10px;
+            }
+            .interest-tag {
+                 padding: 4px 8px;
+                 font-size: 0.8em;
+            }
+
+            /* 4. Cores e Quebra de Página */
+            .header {
+                -webkit-print-color-adjust: exact !important; 
+                print-color-adjust: exact !important; 
+            }
+            /* Garantir que a quebra de página ocorra somente entre seções se necessário (opcional) */
+            /* Evita cabeçalhos de seção soltos */
+            h2 { 
+                 page-break-after: avoid; 
+                 page-break-inside: avoid;
+            }
         }
